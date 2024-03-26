@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/PY4tTp3/great.jpg",
+      "review": "A timeless classic that explores the decadence and moral ambiguity of the Jazz Age society.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classics", "Romance", "Tragedy"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/58dhQxz/images.jpg",
+      "review": "A poignant portrayal of racial injustice and moral growth in a Southern town.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Legal Drama", "Coming-of-Age", "Southern Gothic"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/LRv8zpv/images-1.jpg",
+      "review": "A classic fantasy epic filled with adventure, magic, and friendship.",
+      "totalPages": 1178,
+      "rating": 4.8,
+      "category": "Fantasy",
+      "tags": ["Epic Fantasy", "Adventure", "High Fantasy"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1954
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/9NqcLtv/IMG-6359.jpg",
+      "review": "A poignant coming-of-age story that captures the disillusionment of youth.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming-of-Age", "American Literature", "Cultural Critique"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/JnW8jQg/s-l1600.jpg",
+      "review": "A witty and timeless romance that examines societal norms and the complexities of love.",
+      "totalPages": 279,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Romance", "Regency", "Social Commentary"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/7b4Kt8Q/images-2.jpg",
+      "review": "An enchanting adventure filled with magic, courage, and friendship.",
+      "totalPages": 310,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Adventure", "High Fantasy", "Epic"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]
+  
