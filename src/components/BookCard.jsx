@@ -1,6 +1,7 @@
 import { CiStar } from "react-icons/ci";
 
 import PropTypes from 'prop-types'
+import { Link } from "react-router-dom";
 
 const BookCard = ({book}) => {
 
@@ -8,7 +9,8 @@ const BookCard = ({book}) => {
     
     return (
         <div>
-            <div className="card w-96 h-full bg-base-100 shadow-xl border-solid border-neutral-100 p-4 border-2">
+            <Link  to={`/bookdetail/${book.bookId}`}
+            className="card w-96 h-full bg-base-100 shadow-xl border-solid border-neutral-100 p-4 border-2">
                 <figure className="px-10 pt-10">
                     <img  src={image} alt="Shoes" className="rounded-xl w-44 h-44 bg-[#F3F3F3] p-4" />
                 </figure>
@@ -32,7 +34,7 @@ const BookCard = ({book}) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 };
