@@ -9,6 +9,7 @@ import WishLists from '../components/WishLists'
 import PagestoRead from '../pages/PagestoRead';
 import ErrorPage from '../components/ErrorPage';
 import SignUp from '../pages/SignUp';
+import SignIn from '../components/SignIn';
 export  const router = createBrowserRouter([
 
    {
@@ -54,6 +55,10 @@ export  const router = createBrowserRouter([
         {
           path:'/signup',
           element:<SignUp/>
+        },
+        {
+          path:'/signin',
+          element:<SignIn/>
         }
 
        

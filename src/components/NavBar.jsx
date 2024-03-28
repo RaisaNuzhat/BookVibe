@@ -11,7 +11,7 @@ const NavBar = () => {
             <NavLink to='/' className={({isActive})=>isActive  ? 'text-[#23BE0A] lg:font-bold  ':' text-[#131313] lg:font-bold '}>Home</NavLink>
             <NavLink to='/listedbooks' className={({isActive})=>isActive  ? 'text-[#23BE0A] lg:font-bold  ':' text-[#131313] lg:font-bold '}>Listed Books</NavLink>
             <NavLink to='/pagestoread' className={({isActive})=>isActive  ? 'text-[#23BE0A] lg:font-bold ':' text-[#131313] lg:font-bold '}>Pages to Read</NavLink>
-            <Link   className="btn bg-[#23BE0A] text-white">Sign In</Link>
+            <Link  to='/signin'  className="btn bg-[#23BE0A] text-white">Sign In</Link>
             <Link  to='/signup' className="btn  bg-[#59C6D2] text-white">Sign Up</Link>
 
           </ul>
