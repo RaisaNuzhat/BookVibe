@@ -3,7 +3,7 @@ import { BarChart as BChart, Bar, XAxis, YAxis, CartesianGrid, Cell } from 'rech
 
 const BarChart = ({ data }) => {
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-  const {totalPages,bookName} = data;
+  
 
   
   const TriangleBar = (props) => {
@@ -17,7 +17,7 @@ const BarChart = ({ data }) => {
   };
 
   return (
-    <div className='mx-auto container flex justify-center items-center'>
+    <div className='mx-auto container flex justify-center items-center my-16'>
       <BChart
         width={500}
         height={300}
@@ -30,9 +30,9 @@ const BarChart = ({ data }) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={bookName}/> 
+        <XAxis dataKey="bookName"/> 
         <YAxis />
-        <Bar dataKey={totalPages} fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+        <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
           
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />

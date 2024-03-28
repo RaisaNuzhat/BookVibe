@@ -24,12 +24,12 @@ const PagestoRead = () => {
     }, []);
     return (
         <div>
-            {bookstoadd.map((book, index) => (
-                <div key={index}>
-                    <BarChart book={book} />
+            
+                
+                    <BarChart data={bookstoadd} />
 
-                </div>
-            ))}
+                
+        
         </div>
     );
 };
