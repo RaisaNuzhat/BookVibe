@@ -5,7 +5,7 @@ import { getStoredReadBooks, getWishListBooks } from "../utility/localstorage";
 import ReadBooks from "../components/ReadBooks";
 import WishLists from "../components/WishLists";
 import { IoMdArrowDropdown } from "react-icons/io";
-import PagestoRead from '../pages/PagestoRead'
+//import PagestoRead from '../pages/PagestoRead'
 
 
 const ListedBooks = () => {
@@ -111,10 +111,11 @@ const ListedBooks = () => {
                     {bookstoread.map((book, index) => (
                          <div key={index}>
                          <ReadBooks book={book} />
-                         <PagestoRead bookstoread={bookstoread} />
+                         
                           </div>
                         // <ReadBooks key={index} book={book} />
                         // <PagestoRead bookstoread={bookstoread} />
+                        //<PagestoRead bookstoread={bookstoread} />
                     ))}
 
 

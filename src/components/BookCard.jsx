@@ -18,7 +18,7 @@ const BookCard = ({book}) => {
                 <div className="card-body items-center text-center">
                 <div className="flex items-center justify-evenly w-full ">
                     {tags.map((tag, index) => (
-                        <span key={index} className="inline-block bg-[#F3F3F3] rounded-full px-3 py-3 text-sm font-normal text-[#23BE0A] mr-2 mb-2">
+                        <span key={index} className="inline-block w-28 bg-[#F3F3F3] rounded-full px-3 py-3 text-sm font-normal text-[#23BE0A] mr-2 mb-2">
                             {tag}
                         </span>
                     ))}

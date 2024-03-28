@@ -8,9 +8,9 @@ const NavBar = () => {
         </div>
         <div className="flex-none gap-2">
           <ul className="menu menu-horizontal px-1 text-xl hidden sm:flex gap-5 items-center">
-            <NavLink to='/' className={({isActive})=>isActive  ? 'text-primary font-bold ':'font-bold'}>Home</NavLink>
-            <NavLink to='/listedbooks' className={({isActive})=>isActive  ? 'text-primary font-bold ':'font-bold'}>Listed Books</NavLink>
-            <NavLink to='/pagestoread' className={({isActive})=>isActive  ? 'text-primary font-bold':'font-bold'}>Pages to Read</NavLink>
+            <NavLink to='/' className={({isActive})=>isActive  ? 'text-[#23BE0A] font-bold ':' text-[#131313] font-bold'}>Home</NavLink>
+            <NavLink to='/listedbooks' className={({isActive})=>isActive  ? 'text-[#23BE0A] font-bold ':' text-[#131313] font-bold'}>Listed Books</NavLink>
+            <NavLink to='/pagestoread' className={({isActive})=>isActive  ? 'text-[#23BE0A] font-bold':' text-[#131313] font-bold'}>Pages to Read</NavLink>
             <button className="btn bg-[#23BE0A] text-white">Sign In</button>
             <button className="btn  bg-[#59C6D2] text-white">Sign Up</button>
 
