@@ -21,7 +21,7 @@ This website is a comprehensive book tracking platform designed to help users ma
 - **Live-Link**:https://subtle-entremet-338ce3.netlify.app
 ## Getting Started
 
-To get started with , simply sign up for an account on our website and start adding your favorite books to your library!
+To get started with , simply sign up for an account on our website and start adding your favorite books to your library! To sign in, simply click on the sign in button on the top-right side of the navbar.OR,if you want to sign up, there is a sign up button beside the signin button, simply click on it and fill up the form.That's it! you're ready to go!
 
 
 
