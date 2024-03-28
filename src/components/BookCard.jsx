@@ -40,12 +40,12 @@ const BookCard = ({book}) => {
 };
 BookCard.propTypes = {
     book: PropTypes.object.isRequired,
-    image: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-    bookName: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    author: PropTypes.string.isRequired,
+    // image: PropTypes.string.isRequired,
+    // tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // bookName: PropTypes.string.isRequired,
+    // category: PropTypes.string.isRequired,
+    // rating: PropTypes.number.isRequired,
+    // author: PropTypes.string.isRequired,
   
   }
   
