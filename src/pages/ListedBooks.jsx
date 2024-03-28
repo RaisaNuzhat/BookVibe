@@ -5,6 +5,8 @@ import { getStoredReadBooks, getWishListBooks } from "../utility/localstorage";
 import ReadBooks from "../components/ReadBooks";
 import WishLists from "../components/WishLists";
 import { IoMdArrowDropdown } from "react-icons/io";
+import PagestoRead from '../pages/PagestoRead'
+
 
 const ListedBooks = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -42,13 +44,14 @@ const ListedBooks = () => {
 
 
     return (
+
         <div className="container mx-auto overflow-x-hidden">
             <BookBanner />
             <div className="items-center flex justify-center my-16">
                 <details className="dropdown w-26 ">
                     <summary className="m-1 btn bg-[#23BE0A] text-white font-medium">Sort By
-                    <span><IoMdArrowDropdown /></span>
-                     </summary>
+                        <span><IoMdArrowDropdown /></span>
+                    </summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         <li><a>Item 1</a></li>
                         <li><a>Item 2</a></li>
@@ -77,6 +80,8 @@ const ListedBooks = () => {
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                     </svg>
                     <span>Read Books</span>
+                   
+
                 </Link>
                 <Link
                     to={`wishlistbooks`}
@@ -104,8 +109,15 @@ const ListedBooks = () => {
             {tabIndex === 0 && (
                 <>
                     {bookstoread.map((book, index) => (
-                        <ReadBooks key={index} book={book} />
+                         <div key={index}>
+                         <ReadBooks book={book} />
+                         <PagestoRead bookstoread={bookstoread} />
+                          </div>
+                        // <ReadBooks key={index} book={book} />
+                        // <PagestoRead bookstoread={bookstoread} />
                     ))}
+
+
                 </>
             )}
             {tabIndex === 1 && (

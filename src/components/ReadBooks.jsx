@@ -4,6 +4,8 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { RiPagesLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
+
+
 const ReadBooks = ({ book }) => {
     console.log(book)
     const { bookName, author, category ,image,tags,yearOfPublishing,publisher,totalPages,rating} = book;
@@ -55,9 +57,10 @@ const ReadBooks = ({ book }) => {
          
                        <Link to={`/bookdetail/${book.bookId}`} className="btn  bg-[#23BE0A] text-white btn-xs sm:btn-sm md:btn-md lg:btn-lg">View Details</Link>
                        </div>
-
+                       
                     </div>
             </div>
+           
         </div>
     );
 };
