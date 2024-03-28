@@ -1,23 +1,39 @@
 import BarChart from "../components/BarChart";
-import PropTypes from "prop-types";
 
-const PagestoRead = ({ bookstoread }) => {
+import { useLoaderData } from "react-router-dom";
+
+import { useState, useEffect } from "react";
+import { getStoredReadBooks } from "../utility/localstorage";
+
+const PagestoRead = () => {
+    const books = useLoaderData();
+    const [bookstoadd, setBookstoAdd] = useState([]);
+    useEffect(() => {
+        const storedReadBookids = getStoredReadBooks();
+
+
+        if (books.length > 0) {
+            const bookAdds = books?.filter(book =>
+                storedReadBookids.includes(book.bookId),
+            );
+
+            setBookstoAdd(bookAdds);
+
+            console.log(bookAdds)
+        }
+    }, []);
     return (
         <div>
-            {bookstoread.map((book, index) => (
-                <BarChart key={index} book={book} />
+            {bookstoadd.map((book, index) => (
+                <div key={index}>
+                    <BarChart book={book} />
+
+                </div>
             ))}
         </div>
     );
 };
 
-PagestoRead.propTypes = {
-    bookstoread: PropTypes.arrayOf(
-        PropTypes.shape({
-            bookName: PropTypes.string.isRequired,
-            PagestoRead: PropTypes.number.isRequired,
-        })
-    ).isRequired,
-};
+
 
 export default PagestoRead;

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { BarChart as BChart, Bar, XAxis, YAxis, CartesianGrid, Cell } from 'recharts';
 
-const BarChart = ({ book }) => {
+const BarChart = ({ data }) => {
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+  const {totalPages,bookName} = data;
 
-  // Define TriangleBar component within the BarChart component
+  
   const TriangleBar = (props) => {
     const { fill, x, y, width, height } = props;
     const getPath = `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -16,11 +17,11 @@ const BarChart = ({ book }) => {
   };
 
   return (
-    <div>
+    <div className='mx-auto container flex justify-center items-center'>
       <BChart
         width={500}
         height={300}
-        data={book} // Pass the book data as the data prop
+        data={data} 
         margin={{
           top: 20,
           right: 30,
@@ -29,11 +30,11 @@ const BarChart = ({ book }) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="bookName" /> {/* Use bookName as the dataKey for XAxis */}
+        <XAxis dataKey={bookName}/> 
         <YAxis />
-        <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-          {/* Remove the map function from here as it's already using the book data */}
-          {book.map((entry, index) => (
+        <Bar dataKey={totalPages} fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+          
+          {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Bar>
@@ -43,7 +44,7 @@ const BarChart = ({ book }) => {
 };
 
 BarChart.propTypes = {
-  book: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       bookName: PropTypes.string.isRequired,
       totalPages: PropTypes.number.isRequired,

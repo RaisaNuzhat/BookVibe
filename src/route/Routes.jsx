@@ -10,61 +10,69 @@ import PagestoRead from '../pages/PagestoRead';
 import ErrorPage from '../components/ErrorPage';
 import SignUp from '../pages/SignUp';
 import SignIn from '../components/SignIn';
-export  const router = createBrowserRouter([
+import BarChart from '../components/BarChart';
+export const router = createBrowserRouter([
 
-   {
-    path:'/',
-      element:<MainLayout />,
-       errorElement: <ErrorPage/>,
-      children:[
-        {
-          path:'/',
-          element:<Home/>,
-          
-        },
-        {
-          path:'/bookdetail/:bookId',
-          element:<BookDetail/>,
-         
-          
-        
-        },
-       
-        {
-          path:'/listedbooks',
-          element:<ListedBooks/>,
-          loader: () => fetch('/Book.json'),   
-          
-          children:[
-            {
-                path:'readbooks',
-                element:<ReadBooks/>,
-              
-            },
-            {
-                path:'wishlistbooks',
-                element:<WishLists/>,
-                
-            }
-          ]
-        },
-        {
-          path:'/pagestoread',
-          element:<PagestoRead/>
-        },
-        {
-          path:'/signup',
-          element:<SignUp/>
-        },
-        {
-          path:'/signin',
-          element:<SignIn/>
-        }
+  {
+    path: '/',
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
 
-       
-        
-      ]
-   }
-    
-  
-  ]);
+      },
+      {
+        path: '/bookdetail/:bookId',
+        element: <BookDetail />,
+
+
+
+      },
+
+      {
+        path: '/listedbooks',
+        element: <ListedBooks />,
+        loader: () => fetch('/Book.json'),
+
+        children: [
+          {
+            path: 'readbooks',
+            element: <ReadBooks />,
+
+          },
+          {
+            path: 'wishlistbooks',
+            element: <WishLists />,
+
+          }
+        ]
+      },
+      {
+        path: '/pagestoread',
+        element: <PagestoRead />,
+        loader: () => fetch('/Book.json'),
+        children: [
+          {
+            path: 'barchart',
+            element: <BarChart />,
+
+          },]
+      },
+      {
+        path: '/signup',
+        element: <SignUp />
+      },
+      {
+        path: '/signin',
+        element: <SignIn />
+      }
+
+
+
+    ]
+  }
+
+
+]);
