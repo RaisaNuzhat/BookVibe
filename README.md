@@ -15,7 +15,7 @@ This website is a comprehensive book tracking platform designed to help users ma
 
 - **Personalized Book Tracking**: Keep track of the books you've read, want to read, and are currently reading, all in one place.
 - **Wishlist Management**: Create and manage a wishlist of books you're interested in reading in the future.
-
+-**Book Reviews and Ratings**: Read and watch reviews for books you've read, and see overall ratings from the  community.
 - **Detailed Book Insights**: Gain insights into your reading habits with detailed statistics and analytics about your books.
 - **User-Friendly Interface**: Enjoy a seamless and intuitive user experience with a clean and modern interface.
 - **Live-Link**:https://subtle-entremet-338ce3.netlify.app
